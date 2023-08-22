@@ -1,0 +1,113 @@
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 100;
+  &.one {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    .modal-background {
+      .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+    &.out {
+      transform: scale(1);
+      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      .modal-background {
+        .modal {
+          animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+      }
+    }
+  }
+  .modal-background {
+    display: table-cell;
+    background: rgba($color-third, 0.8);
+    text-align: center;
+    vertical-align: middle;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    .modal {
+      height: 80vh;
+      width: 80vw;
+      background: $color-primary;
+      padding: 5rem 20rem 5rem 20rem;
+      display: inline-block;
+      border-radius: 3px;
+      position: relative;
+     
+    }
+  }
+}
+
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.modal_content {
+
+  color: $color-secondary;
+  font-size: 2rem;
+
+  h2 {
+    background-color: $color-primary-light;
+    padding: 1rem;
+    font-weight: 900;
+    border-radius: 5px;
+  }
+  h3 {
+    background-color: $color-primary-light;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5rem 2.5rem;
+    font-weight: 600;
+  }
+
+}

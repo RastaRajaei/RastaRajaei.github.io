@@ -1,0 +1,99 @@
+// COLOR VARIABLES
+$color-primary: #B7BF11;
+$color-primary-light: #e6eb88;
+
+$color-secondary: #6A033A;
+
+$color-third: #057871;
+
+$color-grey-light-1: #fcf4e9;
+$color-grey-light-2: #909294;
+
+$color-grey-dark-1: #212529;
+$color-grey-dark-2: #282d31;
+
+// FONT VARIABLES
+$font-primary-fa: Vazir;
+$font-primary-en: 'Nunito', sans-serif;
+
+
+
+
+//break points
+$bp-largest: 75em; //1200px
+$bp-large:62.5em; //1000px
+$bp-medium:50em; //800px
+$bp-small:37.2em; //600px
+
+@font-face {
+  font-family: Vazir;
+  src: url('../css/');
+  src: url('../css/?#iefix') format('embedded-opentype'),
+       url('../css/vazir-font-v16.1.0/Vazir.woff') format('woff'),
+       url('../css/vazir-font-v16.1.0/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+      
+@font-face {
+  font-family: Vazir;
+  src: url('../css/vazir-font-v16.1.0/Vazir-Bold.eot');
+  src: url('../css/vazir-font-v16.1.0/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../css/vazir-font-v16.1.0/Vazir-Bold.woff') format('woff'),
+       url('../css/vazir-font-v16.1.0/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../css/vazir-font-v16.1.0/Vazir-Light.eot');
+  src: url('../css/vazir-font-v16.1.0/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+       url('../css/vazir-font-v16.1.0/Vazir-Light.woff') format('woff'),
+       url('../css/vazir-font-v16.1.0/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  // 1rem = 10px
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+      font-size: 42%;
+
+  }
+}
+
+body {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 100vh;
+
+    @media only screen and (max-width : $bp-large) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+
+        
+    }
+}
+
+
+
+
