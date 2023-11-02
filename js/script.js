@@ -48,3 +48,16 @@ $('.modal-background').click(function(e){
         }
     }) 
 })
+
+//////////nav open close
+const openBtn = document.querySelector(".nav_btn");
+const closeBtn = document.querySelector(".nav_btn_close");
+const navBar = document.querySelector(".nav_bar")
+
+openBtn.addEventListener('click' , function () {
+   navBar.style.animation ='open_nav 1s forwards';
+})
+
+closeBtn.addEventListener('click' , function () {
+  navBar.style.animation ='close_nav 1s forwards';
+})

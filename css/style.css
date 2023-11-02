@@ -40,11 +40,62 @@ body {
 .body {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  grid-template-rows: 100vh; }
+  grid-template-rows: minmax(70rem, 100vh); }
   @media only screen and (max-width: 62.5em) {
     .body {
       grid-template-columns: 1fr;
-      grid-template-rows: 100vh; } }
+      grid-template-rows: minmax(70rem, 100vh); } }
+
+.nav_btn {
+  z-index: 4;
+  display: none; }
+  @media only screen and (max-width: 62.5em) {
+    .nav_btn {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      color: #212529;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: #6A033A;
+      color: #B7BF11;
+      font-size: 3rem;
+      font-weight: 900;
+      text-align: center;
+      padding-bottom: 1rem;
+      border: none; } }
+
+.nav_btn_close {
+  z-index: 4;
+  display: none; }
+  @media only screen and (max-width: 62.5em) {
+    .nav_btn_close {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #B7BF11;
+      font-size: 3rem;
+      transition: all 0.2s;
+      border: none; } }
+
+@keyframes open_nav {
+  0% {
+    margin-left: -40rem; }
+  100% {
+    margin-left: 0rem; } }
+
+@keyframes close_nav {
+  0% {
+    margin-left: 0rem; }
+  100% {
+    margin-left: -40rem; } }
 
 .header {
   grid-column: 2 / 3;
@@ -62,27 +113,36 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     height: 100%;
-    transform: translateX(-51%); }
+    transform: translateX(-51%);
+    font-size: 10rem; }
+    @media only screen and (max-width: 87.5em) {
+      .header-img {
+        max-width: 200%; } }
   .header_about {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    padding: 15rem 10rem 1rem 0;
-    margin-left: -6rem;
+    align-self: end;
     text-align: center;
     font-size: 2rem;
     color: #6A033A;
     font-weight: 900; }
     .header_about h2 {
-      margin-left: -30rem;
-      padding: 1rem 1rem 3rem 1rem;
+      text-align: left;
+      margin-left: -3rem;
+      padding: 2rem;
       font-size: 2.5rem;
       font-weight: 900; }
-  .header_links {
+  .header_link_holder {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: end; }
+  .header_links {
     text-align: center;
-    margin: 23rem 40rem 0 35rem;
-    z-index: 10; }
+    z-index: 10;
+    padding: 2rem;
+    min-width: 40rem; }
   .header_link {
     color: #6A033A;
     font-family: 'Algeria', sans-serif !important;
@@ -136,11 +196,8 @@ body {
       overflow: scroll; } }
   @media only screen and (max-width: 62.5em) {
     .nav_bar {
-      flex-direction: row;
-      position: fixed;
-      justify-content: space-around;
-      width: 100%;
-      height: 7rem; } }
+      margin-left: -40rem;
+      min-width: 40rem; } }
   .nav_bar--img {
     height: 20rem;
     width: 20rem;
