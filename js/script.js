@@ -28,17 +28,17 @@ $('.nav_bar--link').click(function(event){
   })
 })
 
-$('.header_link').click(function(event){
-  event.preventDefault();
-  var buttonName = event.target.getAttribute('href');
-  [...modals].map(modal => {
-   let name = modal.getAttribute('data-name');
-   if (name === buttonName) {
-    $(modal).removeAttr('class').addClass('one');
-    $('body').addClass('modal-active');
-   }
-  })
-})
+// $('.header_link').click(function(event){
+//   event.preventDefault();
+//   var buttonName = event.target.getAttribute('href');
+//   [...modals].map(modal => {
+//    let name = modal.getAttribute('data-name');
+//    if (name === buttonName) {
+//     $(modal).removeAttr('class').addClass('one');
+//     $('body').addClass('modal-active');
+//    }
+//   })
+// })
 
 $('.modal-background').click(function(e){
     [...modals].map(modal => {
@@ -61,3 +61,4 @@ openBtn.addEventListener('click' , function () {
 closeBtn.addEventListener('click' , function () {
   navBar.style.animation ='close_nav 1s forwards';
 })
+

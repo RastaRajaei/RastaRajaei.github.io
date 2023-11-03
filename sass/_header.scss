@@ -24,6 +24,8 @@
         font-size: 10rem;
         @media only screen and (max-width: $bp-veryLarg){
             max-width: 200%;
+            height: auto;
+            align-self: center;
             } 
     }
 
