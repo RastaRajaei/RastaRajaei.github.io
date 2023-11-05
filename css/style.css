@@ -40,11 +40,11 @@ body {
 .body {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  grid-template-rows: minmax(70rem, 100vh); }
+  grid-template-rows: minmax(50rem, 100vh); }
   @media only screen and (max-width: 62.5em) {
     .body {
       grid-template-columns: 1fr;
-      grid-template-rows: minmax(70rem, 100vh); } }
+      grid-template-rows: minmax(65rem, 100vh); } }
 
 .nav_btn {
   z-index: 4;
@@ -129,7 +129,7 @@ body {
     color: #6A033A;
     font-weight: 900; }
     .header_about h2 {
-      text-align: left;
+      text-align: center;
       margin-left: -3rem;
       padding: 2rem;
       font-size: 2.5rem;
