@@ -45,6 +45,10 @@ body {
     .body {
       grid-template-columns: 1fr;
       grid-template-rows: minmax(65rem, 100vh); } }
+  @media only screen and (max-width: 37.2em) {
+    .body {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(40rem, 100vh); } }
 
 .nav_btn {
   z-index: 4;
@@ -306,6 +310,11 @@ body {
       display: inline-block;
       border-radius: 3px;
       position: relative; }
+      @media only screen and (max-width: 37.2em) {
+        #modal-container .modal-background .modal {
+          padding: 2rem; }
+          #modal-container .modal-background .modal .col-md-4 p {
+            color: #212529; } }
 
 @keyframes unfoldIn {
   0% {
