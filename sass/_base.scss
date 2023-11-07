@@ -94,8 +94,8 @@ body {
 
     @media only screen and (max-width : $bp-small) {
       grid-template-columns: 1fr;
-      grid-template-rows: minmax(40rem ,80vh);
-       
+      grid-template-rows: 70rem;
+
   }
 }
 
