@@ -48,7 +48,7 @@ body {
   @media only screen and (max-width: 37.2em) {
     .body {
       grid-template-columns: 1fr;
-      grid-template-rows: -webkit-fill-available; } }
+      grid-template-rows: 100svh; } }
 
 .nav_btn {
   z-index: 4;
