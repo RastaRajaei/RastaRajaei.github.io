@@ -63,13 +63,18 @@ body {
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
-      background-color: #6A033A;
+      background-color: #B7BF11;
       color: #B7BF11;
       font-size: 3rem;
       font-weight: 900;
       text-align: center;
       padding-bottom: 1rem;
-      border: none; } }
+      border: none; }
+      .nav_btn div {
+        background-color: #6A033A;
+        width: 18px;
+        height: 2px;
+        margin: 2px 0; } }
 
 .nav_btn_close {
   z-index: 4;
@@ -131,7 +136,8 @@ body {
     text-align: center;
     font-size: 2rem;
     color: #6A033A;
-    font-weight: 900; }
+    font-weight: 900;
+    margin-right: 1rem; }
     .header_about h2 {
       text-align: center;
       margin-left: -3rem;
