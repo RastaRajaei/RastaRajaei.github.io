@@ -62,3 +62,12 @@ closeBtn.addEventListener('click' , function () {
   navBar.style.animation ='close_nav 1s forwards';
 })
 
+document.addEventListener('click' , function (e)  {
+  const element =  e.target.closest('header');
+  if (element != null) {
+    console.log(navBar.style.animation);
+      if (element.classList.value == 'header' && navBar.style.animation == '1s ease 0s 1 normal forwards running open_nav') {
+        navBar.style.animation ='close_nav 1s forwards';
+      }
+    }
+})
