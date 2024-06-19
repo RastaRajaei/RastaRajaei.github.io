@@ -154,7 +154,7 @@ body {
     text-align: center;
     z-index: 10;
     padding: 2rem;
-    min-width: 40rem; }
+    min-width: 43rem; }
   .header_link {
     color: #6A033A;
     font-family: 'Algeria', sans-serif !important;
@@ -166,6 +166,23 @@ body {
     border-radius: 20px;
     position: relative; }
     .header_link::before {
+      position: absolute;
+      content: "";
+      border-radius: 20px;
+      height: 2rem;
+      width: 5rem;
+      top: 0; }
+  .header_link_download {
+    color: #6A033A;
+    font-family: 'Algeria', sans-serif !important;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    position: relative; }
+    .header_link_download::before {
       position: absolute;
       content: "";
       border-radius: 20px;
