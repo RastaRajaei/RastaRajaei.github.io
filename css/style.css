@@ -339,6 +339,10 @@ body {
           #modal-container .modal-background .modal .col-md-4 p {
             color: #212529; } }
 
+.modal-link {
+  text-decoration: none;
+  color: #6A033A; }
+
 @keyframes unfoldIn {
   0% {
     transform: scaleY(0.005) scaleX(0); }

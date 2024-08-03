@@ -42,18 +42,21 @@
       border-radius: 3px;
       position: relative;
 
-      @media only screen and (max-width: $bp-small){
+      @media only screen and (max-width: $bp-small) {
         padding: 2rem;
 
         .col-md-4 p {
           color: $color-grey-dark-1;
         }
-    }
-     
+      }
     }
   }
 }
 
+.modal-link {
+  text-decoration: none;
+  color: $color-secondary;
+}
 
 @keyframes unfoldIn {
   0% {
@@ -98,7 +101,6 @@
 }
 
 .modal_content {
-
   color: $color-secondary;
   font-size: 2rem;
 
@@ -117,5 +119,4 @@
     padding: 0.5rem 2.5rem;
     font-weight: 600;
   }
-
 }
